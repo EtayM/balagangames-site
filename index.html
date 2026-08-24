@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Balagan Games</title>
+<meta name="description" content="Balagan Games — maker of Sneaklings, the paint-to-hide multiplayer party game.">
+<style>
+  :root {
+    --bg: #faf7f2;
+    --ink: #26221c;
+    --muted: #6b6357;
+    --accent: #2fa66a;
+    --card: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1b1916;
+      --ink: #f0ece4;
+      --muted: #a89f92;
+      --accent: #4cc98a;
+      --card: #26221c;
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.6;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  main { max-width: 560px; text-align: center; }
+  h1 { font-size: 2.2rem; letter-spacing: -0.02em; margin-bottom: 8px; }
+  .tag { color: var(--muted); margin-bottom: 40px; }
+  .game {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 28px 24px;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .game h2 { font-size: 1.5rem; margin-bottom: 6px; }
+  .game p { color: var(--muted); }
+  .status {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 4px 14px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  footer { color: var(--muted); font-size: 0.9rem; }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  .links { margin-bottom: 10px; }
+  .links a { margin: 0 10px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Balagan Games</h1>
+  <p class="tag">Small games, big chaos.</p>
+
+  <div class="game">
+    <h2>Sneaklings &mdash; Paint Hide &amp; Seek</h2>
+    <p>Paint yourself into the scene. Blend in. Don't get caught.
+       A real-time multiplayer party game for phones, tablets, and PC.</p>
+    <span class="status">Coming soon</span>
+  </div>
+
+  <footer>
+    <div class="links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="mailto:support@balagangames.com">Support</a>
+    </div>
+    <div>&copy; 2026 Balagan Games</div>
+  </footer>
+</main>
+</body>
+</html>
