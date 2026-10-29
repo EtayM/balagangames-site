@@ -78,6 +78,12 @@
     shared with the other players' devices in your room so that you can rejoin after a
     dropped connection and so that a removed player can't come back in. It is not linked
     to your name, email, or any account.</li>
+    <li>So that bans and blocks keep working after a reinstall, the game also makes a
+    <strong>device code</strong>: a one-way scrambled form of your device's own identifier
+    (on Android, the app's Android ID; on a computer, the machine ID). The identifier
+    itself never leaves your device, and the code can't be turned back into it. The device
+    code is sent to the host of a room you join, travels in a report about you, and can
+    appear on the public ban list if you are banned.</li>
     <li>The <strong>nickname you enter</strong> and your in-game actions (such as paint
     strokes) are visible to the other players in your session while you play. They are
     not stored after the session ends, except inside a player report (below).</li>
@@ -95,7 +101,8 @@
     <li>the anonymous Epic identifiers of you and of the reported player for that
     session;</li>
     <li>the reported player's nickname and <strong>ban code</strong> (a one-way scrambled
-    form of their random player ID; it can't be turned back into the ID);</li>
+    form of their random player ID; it can't be turned back into the ID), and their
+    device code when the room's host knows it;</li>
     <li>the game mode, room code, and round;</li>
     <li>possibly a small picture of the reported player's in-game paint, so we can see what
     was reported.</li>
@@ -104,12 +111,12 @@
   the game and never share them with anyone else. Reports stay in Epic's service, under
   <a href="https://www.epicgames.com/site/en-US/privacypolicy" rel="noopener">Epic's
   privacy policy</a>; we keep no copies of our own.</p>
-  <p>If a player is banned, their ban code is added to a list published on this website,
-  which the game checks before joining public rooms. A ban can be temporary or permanent.
-  The list contains ban codes and, for a temporary ban, the date and time it ends: no names
-  and no other information.</p>
-  <p>If you block a player, the game remembers their ban code on your device only, so you
-  aren't matched with them again. When you join a public room, your block list is shared
+  <p>If a player is banned, their ban code (and their device code, when the report has one)
+  is added to a list published on this website, which the game checks before joining
+  public rooms. A ban can be temporary or permanent. The list contains these codes and,
+  for a temporary ban, the date and time it ends: no names and no other information.</p>
+  <p>If you block a player, the game remembers their ban code and device code on your device
+  only, so you aren't matched with them again. When you join a public room, your block list is shared
   with that room's host so the game can keep you apart. The game also remembers on your
   device that you agreed to the Terms of Use.</p>
 
@@ -126,8 +133,8 @@
 
   <h2>Data security and retention</h2>
   <p>We do not store personal data on servers of our own. Player reports are kept in
-  Epic's service only as long as we need them to moderate. Ban codes stay on the ban list
-  for as long as the ban lasts. Data processed by Epic Games or the platform stores is
+  Epic's service only as long as we need them to moderate. Ban codes and device codes stay
+  on the ban list for as long as the ban lasts. Data processed by Epic Games or the platform stores is
   governed by their policies, linked above.</p>
 
   <h2>Your rights</h2>
