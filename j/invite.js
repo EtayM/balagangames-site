@@ -46,7 +46,15 @@
     return url;
   }
 
-  var api = { codeFromQuery: codeFromQuery, device: device, plan: plan, storeUrl: storeUrl };
+  // The line under a computer's QR: names only the phone stores that are live, so it never
+  // promises a store page that isn't public yet.
+  function desktopScanLine(p) {
+    var names = p.phones.map(function (k) { return k === "play" ? "Android" : "iPhone"; });
+    if (!names.length) return "Scan this with your phone to open the invite there.";
+    return "On your phone instead? Scan this to join from there. Free on " + names.join(" and ") + ".";
+  }
+
+  var api = { codeFromQuery: codeFromQuery, device: device, plan: plan, storeUrl: storeUrl, desktopScanLine: desktopScanLine };
   if (typeof module !== "undefined" && module.exports) module.exports = api;
   else root.SneakInvite = api;
 })(this);

@@ -50,9 +50,7 @@
     var qr = qrcode(0, "M");
     qr.addData(location.origin + "/j?" + code);
     qr.make();
-    html += '<div class="scan"><img class="qr" alt="QR code for this invite" src="' + qr.createDataURL(4, 0) + '"><p>' +
-      (p.soon ? "Play now on your phone: scan this to join from there. Free on Android and iPhone."
-              : "On your phone instead? Scan this to join from there. Free on Android and iPhone.") + "</p></div>";
+    html += '<div class="scan"><img class="qr" alt="QR code for this invite" src="' + qr.createDataURL(4, 0) + '"><p>' + I.desktopScanLine(p) + "</p></div>";
   }
   document.getElementById("card").innerHTML = html;
 })();

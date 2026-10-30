@@ -21,3 +21,9 @@ assert.strictEqual(I.storeUrl("play", live(1, 1, 1), "QZ4K"), "P?id=x&referrer=r
 assert.strictEqual(I.storeUrl("play", live(1, 1, 1), ""), "P?id=x");
 assert.strictEqual(I.storeUrl("steam", live(1, 1, 1), "QZ4K"), "S");
 console.log("invite.js: all checks pass");
+
+// Review fix: the desktop QR caption names only the phone stores that are live.
+assert.strictEqual(I.desktopScanLine({ phones: [] }), "Scan this with your phone to open the invite there.");
+assert.strictEqual(I.desktopScanLine({ phones: ["play"] }), "On your phone instead? Scan this to join from there. Free on Android.");
+assert.strictEqual(I.desktopScanLine({ phones: ["play", "appstore"] }), "On your phone instead? Scan this to join from there. Free on Android and iPhone.");
+console.log("desktopScanLine: all checks pass");
