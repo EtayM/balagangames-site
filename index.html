@@ -3,86 +3,80 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Balagan Games</title>
-<meta name="description" content="Balagan Games — maker of Sneaklings, the paint-to-hide multiplayer party game.">
-<style>
-  :root {
-    --bg: #faf7f2;
-    --ink: #26221c;
-    --muted: #6b6357;
-    --accent: #2fa66a;
-    --card: #ffffff;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #1b1916;
-      --ink: #f0ece4;
-      --muted: #a89f92;
-      --accent: #4cc98a;
-      --card: #26221c;
-    }
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    background: var(--bg);
-    color: var(--ink);
-    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-    line-height: 1.6;
-    display: flex;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-    padding: 24px;
-  }
-  main { max-width: 560px; text-align: center; }
-  h1 { font-size: 2.2rem; letter-spacing: -0.02em; margin-bottom: 8px; }
-  .tag { color: var(--muted); margin-bottom: 40px; }
-  .game {
-    background: var(--card);
-    border-radius: 16px;
-    padding: 28px 24px;
-    margin-bottom: 40px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-  }
-  .game h2 { font-size: 1.5rem; margin-bottom: 6px; }
-  .game p { color: var(--muted); }
-  .status {
-    display: inline-block;
-    margin-top: 14px;
-    padding: 4px 14px;
-    border-radius: 999px;
-    background: var(--accent);
-    color: #fff;
-    font-size: 0.85rem;
-    font-weight: 600;
-  }
-  footer { color: var(--muted); font-size: 0.9rem; }
-  footer a { color: var(--accent); text-decoration: none; }
-  footer a:hover { text-decoration: underline; }
-  .links { margin-bottom: 10px; }
-  .links a { margin: 0 10px; }
-</style>
+<title>Sneaklings: Paint Hide &amp; Seek — Balagan Games</title>
+<meta name="description" content="Sneaklings is an online hide-and-seek party game for 2–8 players: paint yourself into the scene and hope nobody notices. Free on phones.">
+<meta property="og:title" content="Sneaklings: Paint Hide &amp; Seek">
+<meta property="og:description" content="Paint yourself into the scene and hope nobody notices. Online hide-and-seek for 2–8 players.">
+<meta property="og:image" content="https://balagangames.com/img/logo.png">
+<link rel="icon" href="/favicon.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="stylesheet" href="/site.css">
+<script src="/stores.js"></script>
+<script src="/badges.js"></script>
 </head>
 <body>
-<main>
-  <h1>Balagan Games</h1>
-  <p class="tag">Small games, big chaos.</p>
+<div class="table">
+  <header class="topbar"><div class="wrap">
+    <a class="studio" href="/">BALAGAN GAMES</a>
+  </div></header>
 
-  <div class="game">
-    <h2>Sneaklings &mdash; Paint Hide &amp; Seek</h2>
-    <p>Paint yourself into the scene. Blend in. Don't get caught.
-       A real-time multiplayer party game for phones, tablets, and PC.</p>
-    <span class="status">Coming soon</span>
-  </div>
-
-  <footer>
-    <div class="links">
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Use</a>
-      <a href="mailto:support@balagangames.com">Support</a>
+  <div class="hero"><div class="wrap">
+    <div>
+      <h1><img class="logo" src="img/logo.png" alt="Sneaklings" width="900" height="502"></h1>
+      <p class="pitch">Paint yourself into the scene and hope nobody notices.</p>
+      <p class="sub">Online hide-and-seek party game for 2–8 players. Free on phones, with a room code your friends join in seconds.</p>
+      <div class="stores" id="stores"></div>
     </div>
-    <div>&copy; 2026 Balagan Games</div>
-  </footer>
-</main>
+    <div class="shots" aria-hidden="true">
+      <img src="img/paint.jpg" alt="" width="443" height="962">
+      <img src="img/hunt-spot.jpg" alt="" width="443" height="962">
+      <img src="img/gotcha.jpg" alt="" width="443" height="962">
+    </div>
+  </div></div>
+</div>
+
+<section class="block" id="trailer-block"><div class="wrap">
+  <h2>Watch a round</h2>
+  <p class="lead">Hiding, painting, and getting caught.</p>
+  <button class="trailer" id="trailer" type="button" aria-label="Play the trailer"><span class="play"></span></button>
+</div></section>
+
+<section class="block" style="padding-top:0"><div class="wrap">
+  <h2>How it plays</h2>
+  <p class="lead">Hiders disguise themselves as things in the scene. Seekers tap anything that looks a little too alive.</p>
+  <div class="steps">
+    <div class="card step"><img src="img/pick.jpg" alt="" loading="lazy"><h3><span class="n">1</span>Pick a disguise</h3><p>A jar, a lantern, a rubber duck: choose a shape from the shelf and wear it.</p></div>
+    <div class="card step"><img src="img/paint.jpg" alt="" loading="lazy"><h3><span class="n">2</span>Paint yourself in</h3><p>Copy a prop, melt into the wall, or paint something so dumb nobody looks twice.</p></div>
+    <div class="card step"><img src="img/gallery.jpg" alt="" loading="lazy"><h3><span class="n">3</span>Hold still</h3><p>Seekers hunt with a flashlight. Survive, then see everyone's disguise in the gallery.</p></div>
+  </div>
+</div></section>
+
+<section class="block friends" style="padding-top:0"><div class="wrap">
+  <h2>Friends join in seconds</h2>
+  <p class="lead">Make a room, read out the code or show the QR. Your friends play free on their phones.</p>
+  <div class="code" aria-hidden="true"><span class="box">Q</span><span class="box">Z</span><span class="box">4</span><span class="box">K</span></div>
+</div></section>
+
+<footer class="site table"><div class="wrap">
+  <span>© 2026 Balagan Games</span>
+  <nav><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="mailto:support@balagangames.com">support@balagangames.com</a></nav>
+</div></footer>
+
+<script>
+(function () {
+  var S = window.STORES;
+  document.getElementById("stores").innerHTML =
+    storeBadge("steam", S.steam.live && S.steam.url, "Wishlist on") +
+    storeBadge("play", S.play.live && S.play.url) +
+    storeBadge("appstore", S.appstore.live && S.appstore.url);
+  var block = document.getElementById("trailer-block");
+  var btn = document.getElementById("trailer");
+  if (!window.TRAILER_ID) { block.hidden = true; return; }
+  btn.addEventListener("click", function () {
+    btn.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + window.TRAILER_ID +
+      '?autoplay=1&rel=0" title="Sneaklings trailer" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
+  }, { once: true });
+})();
+</script>
 </body>
 </html>

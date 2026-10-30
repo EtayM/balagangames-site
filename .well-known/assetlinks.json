@@ -1,0 +1,14 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.balagangames.sneaklings.game",
+      "sha256_cert_fingerprints": [
+        "66:41:D0:42:D0:C2:AC:5E:BF:77:D8:C0:A7:85:80:63:13:11:51:A5:2C:3F:89:23:B5:9D:5A:97:CF:1F:AA:21",
+        "49:89:07:01:40:3F:3E:9A:EE:CF:C2:83:AD:BA:4B:48:B8:C5:FA:4F:05:4B:0D:C5:70:6D:AE:81:85:7A:43:B9",
+        "C4:4D:56:17:5B:57:25:32:AA:83:01:6D:A8:27:FF:5F:59:CF:FD:A3:82:46:5F:52:5A:04:E0:7B:FE:CA:15:79"
+      ]
+    }
+  }
+]

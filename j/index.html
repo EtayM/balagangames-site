@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>You're invited — Sneaklings</title>
+<meta name="description" content="Join your friend's Sneaklings room: get the game, then type the room code.">
+<meta property="og:title" content="Join my Sneaklings room!">
+<meta property="og:description" content="Paint yourself into the scene and hope nobody notices. Free on phones.">
+<meta property="og:image" content="https://balagangames.com/img/logo.png">
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="stylesheet" href="/site.css">
+<script src="/stores.js"></script>
+<script src="/badges.js"></script>
+<script src="/j/invite.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+</head>
+<body class="table invite">
+<header class="topbar"><div class="wrap"><a class="studio" href="/">BALAGAN GAMES</a></div></header>
+<main>
+  <div class="card" id="card">
+    <img class="logo" src="/img/logo.png" alt="Sneaklings" width="900" height="502">
+    <noscript><p class="have">Get Sneaklings from your phone's app store, then type the room code your friend gave you.</p></noscript>
+  </div>
+</main>
+<footer class="site"><div class="wrap">
+  <span>© 2026 Balagan Games</span>
+  <nav><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></nav>
+</div></footer>
+<script>
+(function () {
+  var I = window.SneakInvite, S = window.STORES;
+  var code = I.codeFromQuery(location.search);
+  var dev = I.device(navigator.userAgent, navigator.maxTouchPoints);
+  var p = I.plan(dev, S);
+  var html = '<img class="logo" src="/img/logo.png" alt="Sneaklings" width="900" height="502">';
+  if (code) {
+    document.title = "Join room " + code + " — Sneaklings";
+    html += '<p class="eyebrow">You\'re invited to room</p><div class="code">' +
+      code.split("").map(function (c) { return '<span class="box">' + c + "</span>"; }).join("") + "</div>";
+  } else {
+    html += '<h1 style="font-size:30px;margin:6px 0 18px">Paint yourself into the scene.</h1>';
+  }
+  html += '<div class="stores">' + storeBadge(p.main, p.soon ? null : I.storeUrl(p.main, S, code)) + "</div>";
+  if (code) html += '<p class="have">Already have it? Open Sneaklings and type <b>' + code + "</b>.</p>";
+  if (dev === "desktop" && code && typeof qrcode === "function") {
+    var qr = qrcode(0, "M");
+    qr.addData(location.origin + "/j?" + code);
+    qr.make();
+    html += '<div class="scan"><img class="qr" alt="QR code for this invite" src="' + qr.createDataURL(4, 0) + '"><p>' +
+      (p.soon ? "Play now on your phone: scan this to join from there. Free on Android and iPhone."
+              : "On your phone instead? Scan this to join from there. Free on Android and iPhone.") + "</p></div>";
+  }
+  document.getElementById("card").innerHTML = html;
+})();
+</script>
+</body>
+</html>
