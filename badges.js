@@ -1,11 +1,13 @@
-// Store badge markup shared by the home and invite pages.
+// Store buttons shared by the home and invite pages. Google Play and the App Store use their
+// official badge art, unaltered (img/badges/, from Google's and Apple's badge pages). Steam has
+// no store badge and its logo must stand alone (Valve brand rules), so Steam is a plain button.
+// A store whose page isn't public yet gets a text-only "Coming soon" pill, never altered art.
 window.storeBadge = function (key, url, verb) {
-  var B = {
-    steam: { small: verb || "Get it on", big: "Steam", glyph: "--g:#1b2838;box-shadow:inset 0 0 0 3px #66c0f4" },
-    play: { small: "GET IT ON", big: "Google Play", glyph: "--g:conic-gradient(#34a853 0 25%,#fbbc04 0 50%,#ea4335 0 75%,#4285f4 0)" },
-    appstore: { small: "Download on the", big: "App Store", glyph: "--g:#fff;border-radius:50%" },
-  }[key];
-  var inner = '<span class="glyph" style="' + B.glyph + '"></span><span><small>' + B.small + "</small><b>" + B.big + "</b></span>";
-  if (!url) return '<span class="badge soon"><span class="glyph" style="' + B.glyph + '"></span><span><small>Coming soon to</small><b>' + B.big + "</b></span></span>";
-  return '<a class="badge" href="' + url + '" rel="noopener">' + inner + "</a>";
+  var NAME = { steam: "Steam", play: "Google Play", appstore: "App Store" }[key];
+  if (!url) return '<span class="badge soon"><span><small>Coming soon to</small><b>' + NAME + "</b></span></span>";
+  if (key === "play")
+    return '<a class="store-badge play" href="' + url + '" rel="noopener"><img src="/img/badges/google-play-badge.png" alt="Get it on Google Play" width="646" height="250"></a>';
+  if (key === "appstore")
+    return '<a class="store-badge appstore" href="' + url + '" rel="noopener"><img src="/img/badges/app-store-badge.svg" alt="Download on the App Store" width="120" height="40"></a>';
+  return '<a class="badge steam" href="' + url + '" rel="noopener"><span><small>' + (verb || "Get it on") + "</small><b>Steam</b></span></a>";
 };
