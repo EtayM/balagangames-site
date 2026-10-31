@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["WP83AHALW5.com.balagangames.sneaklings"],
+        "components": [
+          { "/": "/j", "comment": "room invites: /j?CODE (permanent link shape)" },
+          { "/": "/j/", "comment": "the same page after GitHub Pages' trailing-slash redirect" }
+        ]
+      }
+    ]
+  }
+}
