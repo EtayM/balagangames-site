@@ -127,7 +127,7 @@ footer.site a:hover { text-decoration: underline; }
 /* Invite page */
 .invite { min-height: 100vh; display: flex; flex-direction: column; }
 .invite main { flex: 1; display: grid; place-items: center; padding: 8px 16px 24px; }
-.invite .card { width: 100%; max-width: 460px; text-align: center; padding: 26px 22px 24px; position: relative; }
+.invite .card { width: 100%; max-width: 460px; text-align: center; padding: 26px 22px 24px; position: relative; color: var(--ink); }
 .invite .card .logo { width: 220px; margin: -4px auto 6px; display: block; }
 .invite .eyebrow { color: var(--ink-sub); font-size: 18px; }
 .invite h1 { font-size: 40px; margin: 2px 0 2px; }

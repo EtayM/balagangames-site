@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sneaklings: Paint Hide &amp; Seek</title>
+<meta name="description" content="Hide-and-seek where you paint yourself into the scene. Free on phones, on Steam for PC.">
+<meta property="og:title" content="Sneaklings: Paint Hide & Seek">
+<meta property="og:description" content="Paint yourself into the scene and hope nobody notices. Free on phones.">
+<meta property="og:image" content="https://balagangames.com/img/logo.png">
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="stylesheet" href="/site.css">
+<script src="/stores.js"></script>
+<script src="/badges.js"></script>
+<script src="/j/invite.js"></script>
+<script src="/c/creator.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+</head>
+<body class="table invite">
+<header class="topbar"><div class="wrap"><a class="studio" href="/">BALAGAN GAMES</a></div></header>
+<main>
+  <div class="card" id="card">
+    <img class="logo" src="/img/logo.png" alt="Sneaklings" width="900" height="502">
+    <noscript><p class="have">Sneaklings is free on Android and on Steam for PC. Search "Sneaklings" in your store.</p></noscript>
+  </div>
+</main>
+<footer class="site"><div class="wrap">
+  <span>© 2026 Balagan Games</span>
+  <nav><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></nav>
+  <span class="legal-marks">Google Play and the Google Play logo are trademarks of Google LLC. App Store is a service mark of Apple Inc., registered in the U.S. and other countries. Steam is a trademark of Valve Corporation.</span>
+</div></footer>
+<script>
+(function () {
+  var I = window.SneakInvite, C = window.SneakCreator, S = window.STORES;
+  var link = C.linkFromQuery(location.search);
+  var dev = I.device(navigator.userAgent, navigator.maxTouchPoints);
+  var p = I.plan(dev, S);
+  var jump = C.redirectTarget(p, S, link);
+  if (jump) { location.replace(jump); }
+  var verb = S.steam.releasesAt && Date.now() < Date.parse(S.steam.releasesAt) ? "Wishlist on" : "Get it on";
+  var html = '<img class="logo" src="/img/logo.png" alt="Sneaklings" width="900" height="502">' +
+    '<h1 style="font-size:30px;margin:6px 0 18px">Paint yourself into the scene.</h1>' +
+    '<div class="stores">' + storeBadge(p.main, p.soon ? null : C.trackedUrl(p.main, S, link), verb) + "</div>";
+  if (dev === "desktop" && p.phones.length && typeof qrcode === "function") {
+    var names = p.phones.map(function (k) { return k === "play" ? "Android" : "iPhone"; }).join(" and ");
+    var qr = qrcode(0, "M");
+    qr.addData(location.origin + "/c" + (link.tag ? "?" + link.tag + (link.campaign !== "wave1" ? "&" + link.campaign : "") : ""));
+    qr.make();
+    html += '<div class="scan"><img class="qr" alt="QR code for this page" src="' + qr.createDataURL(4, 0) +
+      '"><p>Playing from your phone? Scan this. Free on ' + names + ".</p></div>";
+  }
+  document.getElementById("card").innerHTML = html;
+})();
+</script>
+</body>
+</html>
