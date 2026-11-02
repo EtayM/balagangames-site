@@ -168,3 +168,31 @@ button.trailer { width: 100%; cursor: pointer; padding: 0; font: inherit; }
 .store-badge.play img { height: 77px; width: auto; margin: -12.5px -9px; }
 .badge.steam { background: #171a21; border-color: #66c0f4; }
 .legal-marks { width: 100%; font-size: 12px; opacity: 0.75; }
+
+/* Press kit page (sketch approved 2026-11-03, game repo docs/superpowers/mockups/2026-11-03-creator-pages/). */
+.press .wrap { max-width: 1000px; }
+.press .hero .wrap { align-items: center; }
+.press .hero h1 { font-size: clamp(34px, 6vw, 56px); }
+.press .hero .sub { font-size: 18px; max-width: 34em; margin-left: 0; text-align: left; }
+.press .hero .candy { margin-top: 18px; border: 0; cursor: pointer; font-size: 20px; }
+.press section.block { padding: 44px 0 0; }
+.press section.block:last-of-type { padding-bottom: 56px; }
+.press .block h2 { text-align: left; }
+.press .block .lead { text-align: left; margin-left: 0; margin-bottom: 18px; }
+.press .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(270px, 100%), 1fr)); }
+.press .card { display: grid; gap: 8px; align-content: start; min-width: 0; }
+.press .card h2 { font-size: 26px; margin-bottom: 0; }
+.press .card p, .press .card li { color: var(--ink-sub); }
+.press .card b { color: var(--ink); }
+.press .card ul { padding-left: 18px; display: grid; gap: 6px; }
+.facts { width: 100%; border-collapse: collapse; }
+.facts th, .facts td { padding: 9px 0; border-bottom: 2px dashed #DCD5F5; text-align: left; vertical-align: top; font-size: 15.5px; font-weight: 600; }
+.facts tr:last-child th, .facts tr:last-child td { border-bottom: 0; }
+.facts th { color: var(--ink-sub); padding-right: 16px; white-space: nowrap; }
+.facts td { overflow-wrap: anywhere; }
+.press-shots { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); }
+.press-shots img { width: 100%; border-radius: 14px; display: block; box-shadow: 0 6px 0 rgba(50,42,94,0.10); }
+.press-files { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr)); margin-top: 16px; }
+.press-file { background: var(--paper); border-radius: 14px; padding: 12px 14px; display: flex; justify-content: space-between; gap: 10px; align-items: center; text-decoration: none; min-height: 44px; }
+.press-file small { display: block; color: var(--ink-sub); font-size: 13px; }
+.press-file .get { font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 15px; color: #C81E6E; white-space: nowrap; }
