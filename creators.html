@@ -66,7 +66,7 @@
 
 <section class="block" id="how"><div class="wrap">
   <h2>Two windows. You play in one, OBS captures the other.</h2>
-  <p class="lead">Streamer Mode is on PC and Mac. Here are four moments in both windows. They play by themselves, or press Next.</p>
+  <p class="lead">Streamer Mode is on PC and Mac. Here are three moments in both windows. They play by themselves, or press Next.</p>
   <div class="windows">
     <div class="pair">
       <div class="mon"><div class="label"><span class="pill me">YOUR SCREEN</span><small>Only you see this</small></div><div class="pic" id="picMain"></div></div>
@@ -193,12 +193,11 @@ if (!reduced) {
   } else loops.forEach(function (v) { ensure(v); v.play(); });
 }
 
-/* Two windows: four moments, both windows at once */
+/* Two windows: three moments, both windows at once */
 var PHASES = [
   { k: "hunt", name: "Hunt", s: 10.6, say: "You hold still. Chat sees what the seeker sees, through the same fog, even with the seeker standing right beside you." },
   { k: "hide", name: "Hide", s: 14, say: "You paint in secret, and chat watches last round: your last painting, the catches, the close calls. In round 1, they watch the seeker get dressed." },
-  { k: "reveal", name: "Reveal", s: 9.6, say: "Now every spot is public, so both windows show the same thing. The camera tours every hider." },
-  { k: "replay", name: "Replay", s: 10, say: "Click WATCH MY REPLAY and your painting plays for chat, sped up to 30 seconds at most, with every mistake left in." }
+  { k: "reveal", name: "Reveal", s: 9.6, say: "Now every spot is public, so both windows show the same thing. The camera tours every hider." }
 ];
 var picM = $("picMain"), picS = $("picStream"), phasesEl = $("phases");
 var phaseIdx = 0, phaseT = 0, lastTick = 0, windowsVisible = false;
