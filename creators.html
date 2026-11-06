@@ -3,110 +3,278 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Run a viewer game: Sneaklings — Balagan Games</title>
-<meta name="description" content="How to run a viewer game of Sneaklings: your chat joins from their phones, free, with a 4-letter code or a QR.">
-<meta property="og:title" content="Run a viewer game of Sneaklings">
-<meta property="og:description" content="Your chat plays with you from their phones. It's free for them, with no account.">
-<meta property="og:image" content="https://balagangames.com/img/logo.png">
+<title>Stream Sneaklings: your chat plays, your spot stays hidden — Balagan Games</title>
+<meta name="description" content="Sneaklings is hide and seek where you paint yourself into the map. Your chat joins free from their phones, and Streamer Mode keeps your hiding spot off your stream, with no stream delay.">
+<meta property="og:title" content="Your chat is hunting you. Your stream won't help them.">
+<meta property="og:description" content="Sneaklings for streamers: chat joins free from their phones, and Streamer Mode keeps your hiding spot off your stream, with no stream delay.">
+<meta property="og:image" content="https://balagangames.com/media/creators/film.jpg">
 <link rel="icon" href="/favicon.png">
-<link rel="stylesheet" href="/site.css">
+<link rel="stylesheet" href="/creators.css">
 </head>
-<body class="press guide">
+<body>
+
 <div class="table">
   <header class="topbar"><div class="wrap"><a class="studio" href="/">BALAGAN GAMES</a></div></header>
   <div class="hero"><div class="wrap">
-    <div>
-      <h1>Run a viewer game of Sneaklings</h1>
-      <p class="sub">Your chat plays with you from their phones. It's free for them, with no account, and takes about a minute to set up.</p>
-      <a class="candy" href="#steps">How it works</a>
+    <h1>Your chat is hunting you. <span>Your stream won't help them.</span></h1>
+    <p class="sub">Sneaklings is hide and seek where you paint yourself into the map. Your chat joins free from their phones, and Streamer Mode keeps your hiding spot off your stream, with no stream delay.</p>
+    <div class="cta-row">
+      <a class="candy" href="#keys">Get Steam keys</a>
+      <a class="ghost" href="#how">See how it works</a>
     </div>
-    <div class="join" aria-label="An example of the room code and QR code you put on stream">
-      <small>Put this on stream</small>
-      <div class="code" aria-hidden="true"><span class="box">Q</span><span class="box">Z</span><span class="box">4</span><span class="box">K</span></div>
-      <canvas class="qr" id="qr" width="116" height="116" aria-hidden="true"></canvas>
-      <small>Example room code</small>
+    <div class="frame">
+      <div class="screen" id="screen">
+        <video id="heroloop" src="media/creators/hero.mp4" poster="media/creators/hero.jpg" muted loop playsinline autoplay aria-hidden="true"></video>
+        <div class="cam"><img src="media/creators/cam_cheer.png" alt=""><small>YOUR CAM HERE</small></div>
+        <button class="play" id="heroplay" type="button"><i></i>Watch it: 0:52</button>
+      </div>
+      <div class="sticker s-gold a">NO STREAM DELAY</div>
+      <div class="sticker s-cyan b">FREE FOR CHAT ON PHONES</div>
     </div>
+    <p class="source">Real game footage, from rounds we set up ourselves.</p>
   </div></div>
 </div>
 
-<section class="block" id="steps"><div class="wrap">
-    <h2>Set it up</h2>
-    <div class="grid">
-      <div class="card"><h3><span class="n">1</span>Open a room</h3>
-        <p>On Steam, press <b>CREATE A ROOM</b>. A 4-letter code and a QR code appear.</p>
-        <p>Viewers point their phone camera at the QR. With the game installed, it joins your room; without it, they get a page with your code and the download button.</p>
-        <p>Or just say the code: they tap <b>JOIN A FRIEND</b> and type it.</p>
-        <p>Steam includes the full game, so everyone in your room plays any map you pick, even on the free version.</p></div>
-      <div class="card"><h3><span class="n">2</span>Seats and the line</h3>
-        <p>A room holds <b>you and 7 viewers</b>. Up to 16 more can <b>WAIT IN LINE</b>, first come, first served. They keep the game open and get called in when a seat frees up.</p>
-        <div class="seats" aria-hidden="true"><span class="seat you">YOU</span><span class="seat"></span><span class="seat"></span><span class="seat"></span><span class="seat"></span><span class="seat"></span><span class="seat"></span><span class="seat"></span><span class="seats-gap">then the line</span><span class="seat wait"></span><span class="seat wait"></span><span class="seat wait"></span><span class="seat wait"></span><span class="seat wait"></span><span class="seat wait"></span><span class="seat wait"></span><span class="seat wait"></span><span class="seat wait"></span><span class="seat wait"></span><span class="seat wait"></span><span class="seat wait"></span><span class="seat wait"></span><span class="seat wait"></span><span class="seat wait"></span><span class="seat wait"></span></div>
-        <p><b>To rotate viewers,</b> play a few rounds with a group, then kick some or all of them (Settings, PLAYERS, tap the player, KICK). The next viewers come in from the line, and a kicked player can't rejoin that room, so the seats keep going to new people.</p>
-        <p><b>To bring earlier players back,</b> create a new room. Its kick list starts empty, so everyone can join again with the new code.</p></div>
-      <div class="card"><h3><span class="n">3</span>Set the pace</h3>
-        <p>The game waits for you between rounds: press <b>NEXT ROUND</b> when chat is ready. In <b>SETUP</b> you choose:</p>
-        <ul><li><b>Hide and seek times.</b> 3:00 and 2:00 by default. A shorter hide keeps a big chat busy.</li><li><b>Rounds.</b> 5 by default, or endless.</li><li><b>Map and mode.</b> Classic, or Infection, where caught hiders join the hunt. It's great with a full room.</li></ul></div>
-    </div>
-  </div></section>
+<section class="block" id="fixes" style="padding-top:44px"><div class="wrap">
+  <h2>Three things that ruin hide and seek on stream. All fixed.</h2>
+  <div class="fixes">
+    <article class="fix">
+      <div class="loop live"><video data-src="media/creators/fix_seek.mp4" poster="media/creators/fix_seek.jpg" muted loop playsinline></video></div>
+      <h3>Chat can see where you're hiding</h3>
+      <p class="fixed"><span class="stampfix">FIXED</span>Your stream shows the seeker's view instead.</p>
+      <p>Same picture, same fog. A viewer who's hunting you learns nothing new by watching.</p>
+    </article>
+    <article class="fix">
+      <div class="loop old"><video data-src="media/creators/fix_recap.mp4" poster="media/creators/fix_recap.jpg" muted loop playsinline></video></div>
+      <h3>Hiding means dead air</h3>
+      <p class="fixed"><span class="stampfix">FIXED</span>While you paint, chat watches last round.</p>
+      <p>Your last painting, the catches and the close calls, on a loop beside the clock.</p>
+    </article>
+    <article class="fix">
+      <div class="loop live"><video data-src="media/creators/fix_talk.mp4" poster="media/creators/fix_talk.jpg" muted loop playsinline></video>
+        <div class="cam"><img src="media/creators/cam_whisper.png" alt=""><small>YOUR CAM</small></div>
+        <div class="bub b1">where are you hiding??</div>
+        <div class="bub you b2">wouldn't you like to know</div>
+        <div class="bub b3">you're the bear, aren't you</div>
+      </div>
+      <h3>A stream delay would kill the conversation</h3>
+      <p class="fixed"><span class="stampfix">FIXED</span>You don't need one.</p>
+      <p>Your stream never shows your spot, so you can talk to chat in real time, all round.</p>
+    </article>
+  </div>
+</div></section>
 
-  <section class="block"><div class="wrap">
-    <h2>Viewers watching your stream to find you</h2>
-    <p class="lead">Turn on <b>Streamer Mode</b> (Settings, <b>STREAMER MODE</b>, on PC and Mac). A second window opens, <b>Sneaklings Stream View</b>. Point OBS at it and play in the main window as normal.</p>
-    <div class="grid">
-      <div class="card"><h3>Set up OBS</h3><p>Capture Stream View with a <b>Window Capture</b>, never the main window or your whole screen. For sound, tick <b>Capture Audio</b> on it and turn off Desktop Audio, so chat hears the game once.</p><p><b>On a Mac,</b> add a <b>macOS Screen Capture</b> source and set its Method to <b>Window Capture</b>. The sound comes with it, so there's nothing to tick.</p><p><b>Don't use Game Capture.</b> It shows your real screen, room code and painting included, even if you pick Sneaklings Stream View in its list.</p></div>
-      <div class="card"><h3>Your room code stays hidden</h3><p>Click the <b>ON AIR</b> sign at the top of your screen and turn on <b>SHOW CODE ON STREAM</b> when you want chat to join. The sign always says what's on.</p></div>
-      <div class="card"><h3>In the room</h3><p>Chat sees your screen: everyone's names and emotes, your Look Book, the lot. Ask them what to wear.</p></div>
-      <div class="card"><h3>While you hide</h3><p>Your stream shows last round's catches and your painting from an earlier round (in round 1, the seeker getting dressed), then the seeker's own view during the hunt, so a viewer who's seeking learns nothing new. There's no delay, so you can talk to chat the whole time.</p></div>
-      <div class="card"><h3>After the round</h3><p>Your stream shows your screen again. Click <b>WATCH MY REPLAY</b> to watch the painting you just did together with chat.</p></div>
-      <div class="card"><h3>Careful what you say</h3><p>"I'm behind the barrel" still gives you away. Bluffing is allowed.</p></div>
-      <div class="card"><h3>Playing with friends while chat just watches?</h3><p>Turn on <b>CHAT IS JUST WATCHING</b> on the ON AIR sign, in the room or between rounds, and your stream shows your real screen the whole time, your paint and your hiding spot included. It's off again in every new room, and it isn't there in public rooms.</p></div>
+<section class="block" id="how"><div class="wrap">
+  <h2>Two windows. You play in one, OBS captures the other.</h2>
+  <p class="lead">Streamer Mode is on PC and Mac. Here are four moments in both windows. They play by themselves, or press Next.</p>
+  <div class="windows">
+    <div class="pair">
+      <div class="mon"><div class="label"><span class="pill me">YOUR SCREEN</span><small>Only you see this</small></div><div class="pic" id="picMain"></div></div>
+      <div class="mon stream"><div class="label"><span class="pill live">YOUR STREAM</span><small>All chat ever sees</small></div><div class="pic" id="picStream"></div></div>
     </div>
-  </div></section>
+    <div class="phases" id="phases" role="tablist" aria-label="Moments of a round"></div>
+    <div class="sayrow"><p class="say" id="say" aria-live="polite"></p><button class="nextbtn" id="nextbtn" type="button"></button></div>
+    <p class="warn"><b>Careful what you say.</b> "I'm behind the barrel" still gives you away. Bluffing is allowed.</p>
+  </div>
+</div></section>
 
-  <section class="block"><div class="wrap">
-    <h2>Trolls</h2>
-    <div class="grid">
-      <div class="card"><h3>Kick</h3><p>Settings, PLAYERS, tap the player, KICK. They're out and can't come back into this room.</p></div>
-      <div class="card"><h3>Report</h3><p>Report an offensive drawing or name from the same sheet. It reaches us, and we can ban them from public rooms.</p></div>
-      <div class="card"><h3>No chat to moderate</h3><p>There's no text or voice chat in the game, and names pass a profanity filter.</p></div>
-    </div>
-  </div></section>
+<section class="block"><div class="wrap">
+  <h2>What chat gets to watch</h2>
+  <div class="mhead"><span class="pill old">WHILE YOU HIDE</span><h3>Hiding can take minutes. Your stream fills them with last round.</h3></div>
+  <div class="moments">
+    <article class="moment"><div class="loop tall old"><video data-src="media/creators/m_paint.mp4" poster="media/creators/m_paint.jpg" muted loop playsinline></video></div>
+      <h3>Your last painting</h3><p>Stroke by stroke, mistakes included, so chat sees how you did it.</p></article>
+    <article class="moment"><div class="loop tall old"><video data-src="media/creators/m_busted.mp4" poster="media/creators/m_busted.jpg" muted loop playsinline></video></div>
+      <h3>The catches</h3><p>Every catch from last round, close up, with who caught who.</p></article>
+    <article class="moment"><div class="loop tall old"><video data-src="media/creators/m_phew.mp4" poster="media/creators/m_phew.jpg" muted loop playsinline></video></div>
+      <h3>The close calls</h3><p>The seeker stood right beside someone and chat had no idea. Now they see it.</p></article>
+  </div>
+  <div class="mhead"><span class="pill live">LIVE</span><h3>Then the round itself.</h3></div>
+  <div class="moments">
+    <article class="moment"><div class="loop tall live"><video data-src="media/creators/m_catch.mp4" poster="media/creators/m_catch.jpg" muted loop playsinline></video></div>
+      <h3>The catch</h3><p>A hider gets caught, and the replay pops up in the corner while the hunt goes on.</p></article>
+    <article class="moment"><div class="loop tall live"><video data-src="media/creators/m_balloon.mp4" poster="media/creators/m_balloon.jpg" muted loop playsinline></video></div>
+      <h3>The water balloon</h3><p>Hiders throw them at the seeker for points. When you're the seeker, that's your chat heckling you.</p></article>
+    <article class="moment"><div class="loop tall"><video data-src="media/creators/m_reveal.mp4" poster="media/creators/m_reveal.jpg" muted loop playsinline></video></div>
+      <h3>The reveal</h3><p>Every round ends on a camera tour of every hider. That's when chat finds out where you were.</p></article>
+  </div>
+</div></section>
 
-  <section class="block"><div class="wrap">
-    <h2>Moments that clip well</h2>
-    <p class="lead">Every round ends on a reveal. The camera tours each hider, then the gallery replays every paint job.</p>
-    <div class="stamps" ><span class="stamp">BUSTED!</span><span class="stamp">NEVER FOUND!</span><span class="stamp">NOBODY GOT CAUGHT!</span><span class="stamp">CLEAN SWEEP!</span></div>
-    <div class="shots-3"><img src="img/hunt-spot.jpg" alt="A seeker hunting through a map" loading="lazy"><img src="img/gotcha.jpg" alt="A hider caught, with a GOTCHA stamp" loading="lazy"><img src="img/gallery.jpg" alt="The gallery of every player's paint job" loading="lazy"></div>
-  </div></section>
+<section class="block"><div class="wrap">
+  <h2>Two ways to stream it</h2>
+  <div class="ways">
+    <article class="way">
+      <div class="loop live"><video data-src="media/creators/w_room.mp4" poster="media/creators/w_room.jpg" muted loop playsinline></video></div>
+      <h3>Chat plays with you</h3>
+      <ul>
+        <li><b>Your code stays hidden</b> until you put it on stream, with a QR code beside it.</li>
+        <li><b>Viewers scan and join</b> from their phones, free, with no account.</li>
+        <li><b>You and 7 viewers,</b> and up to 16 more wait in line for a seat.</li>
+      </ul>
+      <div class="chips"><span class="chip">STREAMER MODE</span><span class="chip">SHOW CODE ON STREAM</span></div>
+    </article>
+    <article class="way friends">
+      <div class="loop live"><video data-src="media/creators/w_friends.mp4" poster="media/creators/w_friends.jpg" muted loop playsinline></video></div>
+      <h3>Friends play, chat watches</h3>
+      <ul>
+        <li><b>Nobody watching is in your room,</b> so there's nothing to protect.</li>
+        <li><b>One switch</b> puts your real screen on stream: your painting and your hiding spot.</li>
+        <li><b>Chat knows where you are.</b> Your friends don't. It switches itself off in every new room.</li>
+      </ul>
+      <div class="chips"><span class="chip">STREAMER MODE</span><span class="chip">CHAT IS JUST WATCHING</span></div>
+    </article>
+  </div>
+</div></section>
 
-  <section class="block"><div class="wrap">
-    <h2>What viewers need</h2>
-    <div class="grid">
-      <div class="card"><p>A phone with Sneaklings from <b>Google Play or the App Store</b>: free, with no account and no ads. PC viewers need the game on Steam.</p></div>
-      <div class="card"><h3>Something broke?</h3><p>Email support@balagangames.com, or tell us on Discord: discord.gg/DzMT9dy8B3</p></div>
-    </div>
-  </div></section>
-  
+<section class="block" id="setup"><div class="wrap">
+  <h2>Set it up in about a minute</h2>
+  <div class="setup">
+    <div class="card"><h3><span class="n">1</span>Turn it on</h3><p>On PC or Mac: Settings, <b>STREAMER MODE</b>. A second window opens, <b>Sneaklings Stream View</b>. Play in the main window as normal.</p></div>
+    <div class="card"><h3><span class="n">2</span>Point OBS at it</h3>
+      <div class="seg" role="group" aria-label="Your computer"><button id="osWin" type="button" aria-pressed="true">Windows</button><button id="osMac" type="button" aria-pressed="false">Mac</button></div>
+      <p id="osText"></p></div>
+    <div class="card"><h3><span class="n">3</span>Open your room</h3><p>Press <b>CREATE A ROOM</b>, then click the <b>ON AIR</b> sign and turn on <b>SHOW CODE ON STREAM</b> when you want chat to join.</p></div>
+  </div>
+  <div class="danger"><b>Don't use Game Capture.</b> It shows your real screen, room code and painting included, even if you pick Sneaklings Stream View in its list.</div>
+  <div class="more">
+    <details><summary>Seats and the line</summary><p>A room holds <b>you and 7 viewers</b>. Up to 16 more can <b>WAIT IN LINE</b>, first come, first served. They keep the game open and get called in when a seat frees up.</p><p><b>To rotate viewers,</b> play a few rounds, then kick some or all of them (Settings, PLAYERS, tap the player, KICK). The next viewers come in from the line, and a kicked player can't rejoin that room.</p><p><b>To bring earlier players back,</b> create a new room. Its kick list starts empty.</p></details>
+    <details><summary>Set the pace</summary><p>The game waits for you between rounds: press <b>NEXT ROUND</b> when chat is ready. In <b>SETUP</b> you choose hide and seek times (3:00 and 2:00 by default), rounds (5 by default, or endless), the map and the mode. A shorter hide keeps a big chat busy. In Infection, caught hiders join the hunt, which is great with a full room.</p></details>
+    <details><summary>Trolls</summary><p><b>Kick:</b> Settings, PLAYERS, tap the player, KICK. They're out and can't come back into this room. <b>Report</b> an offensive drawing or name from the same sheet. It reaches us, and we can ban them from public rooms. There's no text or voice chat in the game, and names pass a profanity filter.</p></details>
+    <details><summary>What viewers need</summary><p>A phone with Sneaklings from Google Play or the App Store: free, with no account and no ads. PC viewers need the game on Steam. Playing on Steam gives you the full game, so everyone in your room plays any map you pick.</p></details>
+    <details><summary>Can I monetize my streams and videos?</summary><p>Yes. Stream it, post it and monetize it. You don't need to ask us.</p></details>
+    <details><summary>Something broke?</summary><p>Email support@balagangames.com, or tell us on Discord: discord.gg/DzMT9dy8B3</p></details>
+  </div>
+</div></section>
+
+<div class="table closing" id="keys"><div class="wrap">
+  <h2>Want to stream it?</h2>
+  <p>Sneaklings comes out on Steam on December 3, and keys work before that. Email us from the address on your channel page, and we'll send keys for you and up to three friends. Your chat doesn't need one: the game is free on phones.</p>
+  <div class="cta-row"><a class="candy" href="mailto:etay@balagangames.com?subject=Steam%20keys%20for%20Sneaklings">Email for keys</a></div>
+  <p class="addr">etay@balagangames.com</p>
+</div></div>
 <footer class="site table"><div class="wrap">
   <span>© 2026 Balagan Games</span>
   <nav><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="mailto:support@balagangames.com">support@balagangames.com</a></nav>
 </div></footer>
 
 <script>
-// An illustrative QR-looking pattern: the real one is the game's own, for a real room.
 (function () {
-  var c = document.getElementById("qr"), x = c.getContext("2d"), n = 29, s = c.width / n, seed = 7;
-  function rnd() { seed = (seed * 16807) % 2147483647; return seed / 2147483647; }
-  x.fillStyle = "#322A5E";
-  function finder(ax, ay) {
-    x.fillRect(ax * s, ay * s, 7 * s, 7 * s);
-    x.clearRect((ax + 1) * s, (ay + 1) * s, 5 * s, 5 * s);
-    x.fillRect((ax + 2) * s, (ay + 2) * s, 3 * s, 3 * s);
+var $ = function (id) { return document.getElementById(id); };
+var reduced = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* The hero: a stream picture loops; Play swaps in the film, with sound and controls */
+var heroLoop = $("heroloop");
+if (reduced) heroLoop.pause();
+$("heroplay").addEventListener("click", function () {
+  var film = document.createElement("video");
+  film.src = "media/creators/film.mp4";
+  film.poster = "media/creators/film.jpg";
+  film.controls = true; film.playsInline = true; film.setAttribute("playsinline", "");
+  heroLoop.replaceWith(film);
+  $("screen").classList.add("film");
+  $("screen").parentNode.classList.add("film");
+  var p = film.play(); if (p && p.catch) p.catch(function () {});
+  film.focus();
+});
+
+/* Loops: load and play only near the screen */
+function ensure(v) { if (!v.src && v.getAttribute("data-src")) v.src = v.getAttribute("data-src"); }
+var loops = [].slice.call(document.querySelectorAll("video[data-src]"));
+if (!reduced) {
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        var v = e.target;
+        if (e.isIntersecting) { ensure(v); var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+        else v.pause();
+      });
+    }, { rootMargin: "200px" });
+    loops.forEach(function (v) { io.observe(v); });
+  } else loops.forEach(function (v) { ensure(v); v.play(); });
+}
+
+/* Two windows: four moments, both windows at once */
+var PHASES = [
+  { k: "hunt", name: "Hunt", s: 10.6, say: "You hold still. Chat sees what the seeker sees, through the same fog, even with the seeker standing right beside you." },
+  { k: "hide", name: "Hide", s: 14, say: "You paint in secret, and chat watches last round: your last painting, the catches, the close calls. In round 1, they watch the seeker get dressed." },
+  { k: "reveal", name: "Reveal", s: 9.6, say: "Now every spot is public, so both windows show the same thing. The camera tours every hider." },
+  { k: "replay", name: "Replay", s: 10, say: "Click WATCH MY REPLAY and your painting plays for chat, sped up to 30 seconds at most, with every mistake left in." }
+];
+var picM = $("picMain"), picS = $("picStream"), phasesEl = $("phases");
+var phaseIdx = 0, phaseT = 0, lastTick = 0, windowsVisible = false;
+PHASES.forEach(function (p, i) {
+  ["m", "s"].forEach(function (w) {
+    var v = document.createElement("video");
+    v.muted = true; v.loop = true; v.playsInline = true; v.setAttribute("playsinline", ""); v.preload = "none";
+    v.poster = "media/creators/pair_" + p.k + "_" + w + ".jpg";
+    v.setAttribute("data-pair", "media/creators/pair_" + p.k + "_" + w + ".mp4");
+    (w === "m" ? picM : picS).appendChild(v);
+    p[w] = v;
+  });
+  var b = document.createElement("button");
+  b.className = "phase"; b.type = "button"; b.setAttribute("role", "tab");
+  b.innerHTML = '<span class="bar"></span><span class="lbl">' + p.name + "</span>";
+  b.addEventListener("click", function () { setPhase(i); });
+  phasesEl.appendChild(b);
+  p.btn = b; p.bar = b.querySelector(".bar");
+});
+function setPhase(i) {
+  phaseIdx = i; phaseT = 0;
+  PHASES.forEach(function (p, j) {
+    var on = j === i;
+    p.btn.setAttribute("aria-selected", String(on));
+    p.btn.classList.toggle("done", j < i);
+    p.bar.style.width = "";
+    ["m", "s"].forEach(function (w) {
+      var v = p[w];
+      v.classList.toggle("on", on);
+      if (on) {
+        if (!v.getAttribute("src")) v.setAttribute("src", v.getAttribute("data-pair"));
+        try { v.currentTime = 0; } catch (e) {}
+        if (!reduced && windowsVisible) { var q = v.play(); if (q && q.catch) q.catch(function () {}); }
+      } else v.pause();
+    });
+  });
+  $("say").textContent = PHASES[i].say;
+  $("nextbtn").textContent = "Next: " + PHASES[(i + 1) % PHASES.length].name + " ›";
+}
+$("nextbtn").addEventListener("click", function () { setPhase((phaseIdx + 1) % PHASES.length); });
+function phaseTick(now) {
+  if (lastTick && windowsVisible && !reduced) {
+    phaseT += (now - lastTick) / 1000;
+    var p = PHASES[phaseIdx];
+    p.bar.style.width = Math.min(100, phaseT / p.s * 100) + "%";
+    if (phaseT >= p.s) setPhase((phaseIdx + 1) % PHASES.length);
   }
-  for (var i = 0; i < n; i++) for (var j = 0; j < n; j++) {
-    var inFinder = (i < 8 && j < 8) || (i > n - 9 && j < 8) || (i < 8 && j > n - 9);
-    if (!inFinder && rnd() > 0.5) x.fillRect(i * s, j * s, s, s);
-  }
-  finder(0, 0); finder(n - 7, 0); finder(0, n - 7);
+  lastTick = now;
+  requestAnimationFrame(phaseTick);
+}
+if ("IntersectionObserver" in window) {
+  new IntersectionObserver(function (es) {
+    windowsVisible = es[0].isIntersecting;
+    var p = PHASES[phaseIdx];
+    ["m", "s"].forEach(function (w) {
+      if (windowsVisible && !reduced) { var q = p[w].play(); if (q && q.catch) q.catch(function () {}); }
+      else p[w].pause();
+    });
+  }, { threshold: 0.25 }).observe($("how"));
+}
+setPhase(0);
+requestAnimationFrame(phaseTick);
+
+/* OBS, by computer */
+var OS_TEXT = {
+  win: "Add a <b>Window Capture</b> of Sneaklings Stream View. Tick <b>Capture Audio</b> on it and turn off Desktop Audio, so chat hears the game once.",
+  mac: "Add a <b>macOS Screen Capture</b> source and set its Method to <b>Window Capture</b>, on Sneaklings Stream View. The sound comes with it, so there's nothing to tick."
+};
+function setOs(k) {
+  $("osText").innerHTML = OS_TEXT[k];
+  $("osWin").setAttribute("aria-pressed", String(k === "win"));
+  $("osMac").setAttribute("aria-pressed", String(k === "mac"));
+}
+$("osWin").addEventListener("click", function () { setOs("win"); });
+$("osMac").addEventListener("click", function () { setOs("mac"); });
+setOs(/Mac/.test(navigator.platform || "") ? "mac" : "win");
 })();
 </script>
 </body>
