@@ -217,6 +217,11 @@ button.trailer { width: 100%; cursor: pointer; padding: 0; font: inherit; }
 .press-file { background: var(--paper); border-radius: 14px; padding: 12px 14px; display: flex; justify-content: space-between; gap: 10px; align-items: center; text-decoration: none; min-height: 44px; }
 .press-file small { display: block; color: var(--ink-sub); font-size: 13px; }
 .press-file .get { font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 15px; color: #C81E6E; white-space: nowrap; }
+/* A file in two formats: each format is its own link, padded out to a 44px tap target. */
+.press-file .get a { display: inline-block; padding: 12px 9px; margin: -12px 0; text-decoration: none; }
+.press-file .get a:last-child { margin-right: -9px; }
+.press-file .get a:hover { text-decoration: underline; }
+.press .block h3.press-group { font-size: 22px; margin-top: 28px; }
 
 /* Streamer guide page (sketch approved 2026-11-03, same mockup as the press kit). Shares the press page's layout. */
 .guide .hero .candy { text-decoration: none; }
