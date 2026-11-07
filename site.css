@@ -41,7 +41,28 @@ h1 .logo { margin: 0; }
 /* Top bar */
 .topbar { padding: 14px 0; }
 .topbar .wrap { display: flex; align-items: center; justify-content: space-between; }
-.studio { font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 18px; letter-spacing: 0.02em; opacity: 0.85; text-decoration: none; }
+
+/* The studio logo (approved 2026-11-07, game repo docs/superpowers/mockups/2026-11-07-balagan-brand/): the coloured
+   BALAGAN inlined from balagan-feet.svg, so CSS can move each letter (.l0-.l6) and its feet, then GAMES in Quicksand
+   in the bar's own colour. 30px tall, held to the old text's 27px line so the bar stays 55px. */
+.brand { display: flex; align-items: center; gap: 8px; text-decoration: none; }
+.topbar .brand { height: 27px; }
+.brand .games { font-family: "Quicksand", system-ui, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.32em; opacity: 0.85; margin-top: 3px; }
+.wm { height: 30px; width: auto; display: block; overflow: visible; }
+.wm svg { height: 100%; width: auto; overflow: visible; display: block; }
+/* The hover gag: the feet pop out, the letters shuffle (40ms apart), then the feet tuck back in. Mouse only, never with reduced motion. */
+.wm .feet { transform: scale(0); transform-box: fill-box; transform-origin: 50% 0%; transition: transform .16s ease-in; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .gag .wm:hover .feet { transform: scale(1); transition: transform .14s cubic-bezier(.3, 1.6, .6, 1); }
+  .gag .wm:hover .l0 { animation: shuffle .5s ease-in-out; }
+  .gag .wm:hover .l1 { animation: shuffle .5s ease-in-out .04s; }
+  .gag .wm:hover .l2 { animation: shuffle .5s ease-in-out .08s; }
+  .gag .wm:hover .l3 { animation: shuffle .5s ease-in-out .12s; }
+  .gag .wm:hover .l4 { animation: shuffle .5s ease-in-out .16s; }
+  .gag .wm:hover .l5 { animation: shuffle .5s ease-in-out .20s; }
+  .gag .wm:hover .l6 { animation: shuffle .5s ease-in-out .24s; }
+}
+@keyframes shuffle { 0%, 100% { transform: translateY(0); } 35% { transform: translateY(-280px); } 60% { transform: translateY(0); } 78% { transform: translateY(-90px); } }
 
 /* Hero */
 .hero { padding: 8px 0 56px; overflow: hidden; }
