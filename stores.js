@@ -4,7 +4,7 @@
 window.STORES = {
   // releasesAt: before it, the creator page's Steam button says "Wishlist on".
   steam: { live: true, url: "https://store.steampowered.com/app/5524390", releasesAt: "2026-12-03T18:00:00Z" },
-  play: { live: false, url: "https://play.google.com/store/apps/details?id=com.balagangames.sneaklings.game" },
+  play: { live: true, url: "https://play.google.com/store/apps/details?id=com.balagangames.sneaklings.game" },
   // pt: App Store Connect's provider token (App Analytics → campaign link generator); the
   // creator page tags App Store links only once it is set.
   appstore: { live: false, url: "https://apps.apple.com/app/id6824868469", pt: "" },
