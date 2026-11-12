@@ -189,3 +189,59 @@ button.trailer { width: 100%; cursor: pointer; padding: 0; font: inherit; }
 .store-badge.play img { height: 77px; width: auto; margin: -12.5px -9px; }
 .badge.steam { background: #171a21; border-color: #66c0f4; }
 .legal-marks { width: 100%; font-size: 12px; opacity: 0.75; }
+
+/* Press kit page (sketch approved 2026-11-03, game repo docs/superpowers/mockups/2026-11-03-creator-pages/). */
+.press .wrap { max-width: 1000px; }
+.press .hero .wrap { align-items: center; }
+.press .hero h1 { font-size: clamp(34px, 6vw, 56px); }
+.press .hero .sub { font-size: 18px; max-width: 34em; margin-left: 0; text-align: left; }
+.press .hero .candy { margin-top: 18px; border: 0; cursor: pointer; font-size: 20px; }
+.press section.block { padding: 44px 0 0; }
+.press section.block:last-of-type { padding-bottom: 56px; }
+.press .block h2 { text-align: left; }
+.press .block .lead { text-align: left; margin-left: 0; margin-bottom: 18px; }
+.press .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(270px, 100%), 1fr)); }
+.press .card { display: grid; gap: 8px; align-content: start; min-width: 0; }
+.press .card h2 { font-size: 26px; margin-bottom: 0; }
+.press .card p, .press .card li { color: var(--ink-sub); }
+.press .card b { color: var(--ink); }
+.press .card ul { padding-left: 18px; display: grid; gap: 6px; }
+.facts { width: 100%; border-collapse: collapse; }
+.facts th, .facts td { padding: 9px 0; border-bottom: 2px dashed #DCD5F5; text-align: left; vertical-align: top; font-size: 15.5px; font-weight: 600; }
+.facts tr:last-child th, .facts tr:last-child td { border-bottom: 0; }
+.facts th { color: var(--ink-sub); padding-right: 16px; white-space: nowrap; }
+.facts td { overflow-wrap: anywhere; }
+.press-shots { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); }
+.press-shots img { width: 100%; border-radius: 14px; display: block; box-shadow: 0 6px 0 rgba(50,42,94,0.10); }
+.press-files { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr)); margin-top: 16px; }
+.press-file { background: var(--paper); border-radius: 14px; padding: 12px 14px; display: flex; justify-content: space-between; gap: 10px; align-items: center; text-decoration: none; min-height: 44px; }
+.press-file small { display: block; color: var(--ink-sub); font-size: 13px; }
+.press-file .get { font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 15px; color: #C81E6E; white-space: nowrap; }
+/* A file in two formats: each format is its own link, padded out to a 44px tap target. */
+.press-file .get a { display: inline-block; padding: 12px 9px; margin: -12px 0; text-decoration: none; }
+.press-file .get a:last-child { margin-right: -9px; }
+.press-file .get a:hover { text-decoration: underline; }
+.press .block h3.press-group { font-size: 22px; margin-top: 28px; }
+
+/* Streamer guide page (sketch approved 2026-11-03, same mockup as the press kit). Shares the press page's layout. */
+.guide .hero .candy { text-decoration: none; }
+.join { background: var(--paper); color: var(--ink); border-radius: var(--radius); padding: 18px; display: grid; justify-items: center; gap: 12px; box-shadow: 0 10px 0 rgba(0,0,0,0.2); transform: rotate(1.5deg); max-width: 340px; justify-self: center; width: 100%; }
+.join small { color: var(--ink-sub); font-size: 15px; }
+.join .code { display: inline-flex; gap: 6px; }
+.join .box { width: 48px; height: 58px; font-size: 34px; }
+.join .qr { width: 132px; height: 132px; border-radius: 10px; background: #fff; padding: 8px; box-shadow: inset 0 0 0 2px #DCD5F5; display: block; }
+.table { overflow-x: clip; }
+.guide .card h3 { font-size: 22px; display: flex; align-items: center; gap: 10px; }
+.guide .n { display: inline-grid; place-items: center; flex: none; width: 34px; height: 34px; border-radius: 50%; background: var(--accent); font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 19px; }
+.seats { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 4px; }
+.seat { width: 26px; height: 26px; border-radius: 50%; background: var(--secondary); display: grid; place-items: center; font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 10px; color: var(--ink); }
+.seat.you { background: var(--primary); color: var(--paper); }
+.seat.wait { background: transparent; box-shadow: inset 0 0 0 2px #DCD5F5; width: 20px; height: 20px; }
+.seats-gap { width: 100%; font-size: 14px; color: var(--ink-sub); }
+.stamps { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.stamp { font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 16px; padding: 5px 12px; border-radius: 8px; background: var(--primary); color: var(--paper); transform: rotate(-2deg); }
+.stamp:nth-child(2) { background: var(--reward); transform: rotate(1.5deg); }
+.stamp:nth-child(3) { background: var(--accent); color: var(--ink); }
+.stamp:nth-child(4) { background: var(--secondary); color: var(--ink); transform: rotate(2deg); }
+.shots-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; max-width: 520px; }
+.shots-3 img { width: 100%; border-radius: 14px; border: 4px solid var(--paper); display: block; }
