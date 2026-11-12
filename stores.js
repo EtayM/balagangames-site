@@ -7,7 +7,7 @@ window.STORES = {
   play: { live: true, url: "https://play.google.com/store/apps/details?id=com.balagangames.sneaklings.game" },
   // pt: App Store Connect's provider token (App Analytics → campaign link generator); the
   // creator page tags App Store links only once it is set.
-  appstore: { live: false, url: "https://apps.apple.com/app/id6824868469", pt: "" },
+  appstore: { live: true, url: "https://apps.apple.com/app/id6824868469", pt: "" },
 };
 // The trailer's YouTube id ("" hides the section). Loads only when a visitor presses play.
 window.TRAILER_ID = "NXsPhvSUwOg";
